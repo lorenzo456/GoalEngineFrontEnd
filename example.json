@@ -1,0 +1,61 @@
+{
+    "Goals": [
+        {
+            "Goal": "Patient will initiate a video call with family members",
+            "Duration": "30 minutes",
+            "Frequency": 3,
+            "Frequency Scale": "weekly",
+            "Time Period": "next 3 months",
+            "Step-by-step Plan": [
+                "1. Schedule a convenient time for the video call with family members",
+                "2. Set up the necessary technology and ensure a stable internet connection",
+                "3. Initiate the video call and engage in meaningful conversation with family members",
+                "4. Reflect on the positive emotions and sense of connection achieved through the call"
+            ],
+            "Tips for Progress": [
+                "1. Prioritize regular communication with family members",
+                "2. Plan activities or topics to discuss during the video call to make it more engaging",
+                "3. Express gratitude and appreciation for the opportunity to connect with family"
+            ],
+            "Goal Explanation": "Initiating video calls with family members allows for regular contact, enhancing collaboration, relatedness, and feedback. It promotes social connection, emotional well-being, and overall satisfaction in the patient's life."
+        },
+        {
+            "Goal": "Patient will attend a family gathering",
+            "Duration": "3 hours",
+            "Frequency": 1,
+            "Frequency Scale": "monthly",
+            "Time Period": "next 6 months",
+            "Step-by-step Plan": [
+                "1. Coordinate with family members to plan a suitable date and location for the gathering",
+                "2. Make necessary arrangements for transportation and accommodation, if required",
+                "3. Attend the family gathering and actively participate in shared activities and conversations",
+                "4. Reflect on the positive experiences and sense of belonging achieved during the gathering"
+            ],
+            "Tips for Progress": [
+                "1. Prioritize family events and mark them on the calendar",
+                "2. Communicate openly with family members to ensure everyone's needs and preferences are considered",
+                "3. Contribute to the planning and organization of the gathering to increase personal investment"
+            ],
+            "Goal Explanation": "Attending family gatherings fosters collaboration, relatedness, and feedback by providing opportunities to strengthen familial bonds, share experiences, and receive support. It contributes to the patient's social well-being and overall happiness."
+        },
+        {
+            "Goal": "Patient will actively engage in family discussions and decision-making",
+            "Duration": "1 hour",
+            "Frequency": 2,
+            "Frequency Scale": "weekly",
+            "Time Period": "ongoing",
+            "Step-by-step Plan": [
+                "1. Actively listen to family members during discussions, showing genuine interest and respect",
+                "2. Share personal opinions, ideas, and concerns within the family setting",
+                "3. Contribute to decision-making processes by offering suggestions and seeking consensus",
+                "4. Reflect on the sense of collaboration, relatedness, and feedback achieved through active engagement"
+            ],
+            "Tips for Progress": [
+                "1. Create a supportive and inclusive environment where everyone's input is valued",
+                "2. Practice effective communication skills, such as active listening and constructive feedback",
+                "3. Recognize and appreciate the diversity of perspectives within the family"
+            ],
+            "Goal Explanation": "Active engagement in family discussions and decision-making promotes collaboration, relatedness, and feedback. It allows the patient to contribute to family dynamics, strengthen relationships, and develop a sense of agency and belonging within the family unit."
+        }
+    ]
+}
