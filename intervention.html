@@ -375,7 +375,7 @@
       document.getElementById("loading3").style.visibility = "visible";
       document.getElementById("loading6").style.visibility = "visible";
 
-      const response = await fetch("http://localhost:3000/dimensiongoals?outcomeGoal=" + outcomeGoal+ "&dimension="+dimension, requestOptions)
+      const response = await fetch("https://ggzc1-api.gamebus.eu/dimensiongoals?outcomeGoal=" + outcomeGoal+ "&dimension="+dimension, requestOptions)
         .then(response => response.text())
         .then(result => displayData(result, offset))
         .then(r => removeLoading(dimension))
