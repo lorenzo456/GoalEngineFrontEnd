@@ -346,6 +346,13 @@
 
     });
     
+    document.getElementById('SendToGameBus').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        getBearerToken(username, password);
+    });
+    
     async function removeLoading(dimension){
 
         if(dimension ==="social"){
@@ -372,7 +379,7 @@
         .then(response => response.text())
         .then(result => displayData(result, offset))
         .then(r => removeLoading(dimension))
-        .catch(error => console.log('error', error));
+        .catch(error => linkTo("failure"));
       }
 
     async function displayData(generatedAnswers, offset){
@@ -390,7 +397,159 @@
 
     }
 
+    async function getBearerToken(username, password){
+        const token_url = "https://api-new.gamebus.eu/v2/oauth/token";
+        const credentials = `${username}:${password}`;
 
+        const payload = `grant_type=password&username=${username}&password=${password}`;
+        const headers = {
+        "Authorization":  "Basic Z2FtZWJ1c19iYXNlX2FwcDppdkFxTFNSSnBRaDJ4QzE4OVYySEFvblVXWmd4UnVZQg==",
+        "Content-Type": "application/x-www-form-urlencoded",
+        };
+
+        fetch(token_url, {
+        method: 'POST',
+        headers: headers,
+        body: payload,
+        })
+        .then(response => response.json())
+        .then(parsed_response => uploadToGamebus(parsed_response)
+        )
+        .catch(error => linkTo("failure")
+        );
+    }
+
+    async function linkTo(status)
+    {
+        if(status ==="success"){
+            window.location = "https://lorenzo456.github.io/GoalEngineFrontEnd/success.html";
+        }
+        else{
+            window.location = "https://lorenzo456.github.io/GoalEngineFrontEnd/failure.html";
+        }
+    }
+
+    async function uploadToGamebus(parsed_response){
+
+
+        let socialGoals = 
+        {
+                "Goal 1" : {
+                    "name": document.getElementById("goalName"+0).value,
+                    "description" : document.getElementById("stepByStepPlan"+0).value,
+                    "frequency"   : document.getElementById("frequency"+0).value
+                },
+                "Goal 2" : {
+                    "name": document.getElementById("goalName"+1).value,
+                    "description" : document.getElementById("stepByStepPlan"+1).value,
+                    "frequency"   : document.getElementById("frequency"+1).value
+                },
+                "Goal 3" : {
+                    "name": document.getElementById("goalName"+2).value,
+                    "description" : document.getElementById("stepByStepPlan"+2).value,
+                    "frequency"   : document.getElementById("frequency"+2).value
+                }
+        };
+        
+        let jsonSocialGoals = JSON.stringify(socialGoals);
+
+        let physicalGoals = 
+        {
+                "Goal 1" : {
+                    "name": document.getElementById("goalName"+3).value,
+                    "description" : document.getElementById("stepByStepPlan"+3).value,
+                    "frequency"   : document.getElementById("frequency"+3).value
+                },
+                "Goal 2" : {
+                    "name": document.getElementById("goalName"+4).value,
+                    "description" : document.getElementById("stepByStepPlan"+4).value,
+                    "frequency"   : document.getElementById("frequency"+4).value
+                },
+                "Goal 3" : {
+                    "name": document.getElementById("goalName"+5).value,
+                    "description" : document.getElementById("stepByStepPlan"+5).value,
+                    "frequency"   : document.getElementById("frequency"+5).value
+                }
+        }
+
+        let jsonPhysicalGoals = JSON.stringify(physicalGoals);
+
+        let cognitiveGoals = 
+        {
+                "Goal 1" : {
+                    "name": document.getElementById("goalName"+6).value,
+                    "description" : document.getElementById("stepByStepPlan"+6).value,
+                    "frequency"   : document.getElementById("frequency"+6).value
+                },
+                "Goal 2" : {
+                    "name": document.getElementById("goalName"+7).value,
+                    "description" : document.getElementById("stepByStepPlan"+7).value,
+                    "frequency"   : document.getElementById("frequency"+7).value
+                },
+                "Goal 3" : {
+                    "name": document.getElementById("goalName"+8).value,
+                    "description" : document.getElementById("stepByStepPlan"+8).value,
+                    "frequency"   : document.getElementById("frequency"+8).value
+                }
+        }
+        let jsonCongnitiveGoals = JSON.stringify(cognitiveGoals);
+
+        let social = JSON.parse(jsonSocialGoals)
+        let physical = JSON.parse(jsonPhysicalGoals)
+        let cognitive = JSON.parse(jsonCongnitiveGoals)
+
+        let generatedGoals = 
+        {
+            "GeneratedGoals" : {
+                social,
+                physical,
+                cognitive,
+            }
+        }
+        let jsonGeneratedGoals = JSON.stringify(generatedGoals);
+
+        // console.log(jsonGeneratedGoals);
+        // console.log(JSON.parse(jsonGeneratedGoals));
+        // console.log(JSON.stringify(jsonGeneratedGoals));
+
+
+        let activity = {
+        "gameDescriptor": 1134,
+        "dataProvider": 1,
+        "miniGameUse": null,
+        "date": Date.now(),
+        "propertyInstances": [
+            {
+            "property": 1280,
+            "value": jsonGeneratedGoals
+            }
+        ],
+        "players": [106682]
+        };
+
+        console.log(activity);
+        let activityJsonData = JSON.stringify(activity);
+        console.log(parsed_response.access_token);
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", `Bearer ${parsed_response.access_token}`);
+
+        var formdata = new FormData();
+        formdata.append("activity", activityJsonData);
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: formdata,
+        redirect: 'follow'
+        };
+
+        fetch("https://api-new.gamebus.eu/v2/activities?dryrun=false&fields=personalPoints.value", requestOptions)
+        .then(response => response.text())
+        .then(result => linkTo("success"))
+        .catch(error => linkTo("failure"));
+        }
+
+    
   </script>
 
 </body>
