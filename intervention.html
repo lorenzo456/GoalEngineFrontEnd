@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Question Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -41,7 +42,7 @@
     }
 
     .container{
-      width: 600px; position: relative; margin: 0 auto;
+      /* width: 600px; position: relative; margin: 0 auto; */
     }
 
     .container img{
@@ -52,171 +53,280 @@
   </style>
 </head>
 <body>
-<div>
-  <form action="#" method="get" id="questionForm">
-    <h1>Welcome to the GOALS engine</h1>
-    <label for="question">Outcome Goal</label>
-    <input type="text" id="question" name="question" required>
-    <button type="submit">Submit</button>
-  </form>
-<div class="containerWrapper">
-  <div class="container">
-  <img id="loading0" src="loading.gif" alt="Italian Trulli">
-  <form id="healthGoalsForm0">
-    <h2>GOAL 1</h2>
-    <label for="goalName">Goal Name:</label>
-    <input type="text" id="goalName0" name="goalName" required>
+    <form action="#" method="get" id="questionForm">
+        <h1>Welcome to the GOALS engine</h1>
+        <label for="question">social Goal</label>
+        <input type="text" id="question" name="question" required>
+        <label for="physicalQuestion">Physical Goal</label>
+        <input type="text" id="physicalQuestion" name="physicalQuestion" required>
+        <label for="cognitiveQuestion">Cognitive Goal</label>
+        <input type="text" id="cognitiveQuestion" name="cognitiveQuestion" required>
+        <button type="submit">Submit</button>
+      </form>
+    <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col-4">
+            <div class="container1">
+                <img id="loading0" src="loading.gif" alt="Italian Trulli">
+                <form id="healthGoalsForm0">
+                  <h2>Level 1</h2>
+                  <label for="goalName">Goal Name:</label>
+                  <input type="text" id="goalName0" name="goalName" required>
+              
+                  <label for="duration">Duration:</label>
+                  <input type="text" id="duration0" name="duration" required>
+              
+                  <label for="frequency">Frequency:</label>
+                  <input type="number" id="frequency0" name="frequency" required>
+              
+                  <label for="stepByStepPlan">Step by Step Plan:</label>
+                  <textarea id="stepByStepPlan0" name="stepByStepPlan" rows="4" required></textarea>
+              
+                  <label for="tipsForProgress">Tips for Progress:</label>
+                  <textarea id="tipsForProgress0" name="tipsForProgress" rows="4" required></textarea>
+              
+                  <label for="goalExplanation">Goal Explanation:</label>
+                  <textarea id="goalExplanation0" name="goalExplanation" rows="4" required></textarea>
+              
+                </form>
+              </div>
+          </div>
+          <div class="col-4">
+            <div class="container1">
+                <!-- <img id="loading1" src="loading.gif" alt="Italian Trulli"> -->
+                <form id="healthGoalsForm1">
+                  <h2>Level 2</h2>
+              
+                  <label for="goalName">Goal Name:</label>
+                  <input type="text" id="goalName1" name="goalName" required>
+              
+                  <label for="duration">Duration:</label>
+                  <input type="text" id="duration1" name="duration" required>
+              
+                  <label for="frequency">Frequency:</label>
+                  <input type="number" id="frequency1" name="frequency" required>
+              
+                  <label for="stepByStepPlan">Step by Step Plan:</label>
+                  <textarea id="stepByStepPlan1" name="stepByStepPlan" rows="4" required></textarea>
+              
+                  <label for="tipsForProgress">Tips for Progress:</label>
+                  <textarea id="tipsForProgress1" name="tipsForProgress" rows="4" required></textarea>
+              
+                  <label for="goalExplanation">Goal Explanation:</label>
+                  <textarea id="goalExplanation1" name="goalExplanation" rows="4" required></textarea>
+              
+                </form>
+                </div>
+          </div>
+          <div class="col-4">
+            <div class="container1">
+                <!-- <img id="loading2" src="loading.gif" alt="Italian Trulli"> -->
+              <form id="healthGoalsForm2">
+                <h2>Level 3</h2>
+            
+                <label for="goalName">Goal Name:</label>
+                <input type="text" id="goalName2" name="goalName" required>
+            
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration2" name="duration" required>
+            
+                <label for="frequency">Frequency:</label>
+                <input type="number" id="frequency2" name="frequency" required>
+            
+                <label for="stepByStepPlan">Step by Step Plan:</label>
+                <textarea id="stepByStepPlan2" name="stepByStepPlan" rows="4" required></textarea>
+            
+                <label for="tipsForProgress">Tips for Progress:</label>
+                <textarea id="tipsForProgress2" name="tipsForProgress" rows="4" required></textarea>
+            
+                <label for="goalExplanation">Goal Explanation:</label>
+                <textarea id="goalExplanation2" name="goalExplanation" rows="4" required></textarea>
+            
+              </form>
+              </div>
+          </div>
+        </div>
+        <div class="row align-items-start">
+            <div class="col-4">
+              <div class="container1">
+                  <img id="loading3" src="loading.gif" alt="Italian Trulli">
+                  <form id="healthGoalsForm0">
+                    <h2>Level 1</h2>
+                    <label for="goalName">Goal Name:</label>
+                    <input type="text" id="goalName3" name="goalName" required>
+                
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration3" name="duration" required>
+                
+                    <label for="frequency">Frequency:</label>
+                    <input type="number" id="frequency3" name="frequency" required>
+                
+                    <label for="stepByStepPlan">Step by Step Plan:</label>
+                    <textarea id="stepByStepPlan3" name="stepByStepPlan" rows="4" required></textarea>
+                
+                    <label for="tipsForProgress">Tips for Progress:</label>
+                    <textarea id="tipsForProgress3" name="tipsForProgress" rows="4" required></textarea>
+                
+                    <label for="goalExplanation">Goal Explanation:</label>
+                    <textarea id="goalExplanation3" name="goalExplanation" rows="4" required></textarea>
+                
+                  </form>
+                </div>
+            </div>
+            <div class="col-4">
+              <div class="container1">
+                  <!-- <img id="loading4" src="loading.gif" alt="Italian Trulli"> -->
+                  <form id="healthGoalsForm4">
+                    <h2>Level 2</h2>
+                
+                    <label for="goalName">Goal Name:</label>
+                    <input type="text" id="goalName4" name="goalName" required>
+                
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration4" name="duration" required>
+                
+                    <label for="frequency">Frequency:</label>
+                    <input type="number" id="frequency4" name="frequency" required>
+                
+                    <label for="stepByStepPlan">Step by Step Plan:</label>
+                    <textarea id="stepByStepPlan4" name="stepByStepPlan" rows="4" required></textarea>
+                
+                    <label for="tipsForProgress">Tips for Progress:</label>
+                    <textarea id="tipsForProgress4" name="tipsForProgress" rows="4" required></textarea>
+                
+                    <label for="goalExplanation">Goal Explanation:</label>
+                    <textarea id="goalExplanation4" name="goalExplanation" rows="4" required></textarea>
+                
+                  </form>
+                  </div>
+            </div>
+            <div class="col-4">
+              <div class="container1">
+                  <!-- <img id="loading5" src="loading.gif" alt="Italian Trulli"> -->
+                <form id="healthGoalsForm5">
+                  <h2>Level 3</h2>
+              
+                  <label for="goalName">Goal Name:</label>
+                  <input type="text" id="goalName5" name="goalName" required>
+              
+                  <label for="duration">Duration:</label>
+                  <input type="text" id="duration5" name="duration" required>
+              
+                  <label for="frequency">Frequency:</label>
+                  <input type="number" id="frequency5" name="frequency" required>
+              
+                  <label for="stepByStepPlan">Step by Step Plan:</label>
+                  <textarea id="stepByStepPlan5" name="stepByStepPlan" rows="4" required></textarea>
+              
+                  <label for="tipsForProgress">Tips for Progress:</label>
+                  <textarea id="tipsForProgress5" name="tipsForProgress" rows="4" required></textarea>
+              
+                  <label for="goalExplanation">Goal Explanation:</label>
+                  <textarea id="goalExplanation5" name="goalExplanation" rows="4" required></textarea>
+              
+                </form>
+                </div>
+            </div>
+          </div>
+          <div class="row align-items-start">
+            <div class="col-4">
+              <div class="container1">
+                  <img id="loading6" src="loading.gif" alt="Italian Trulli">
+                  <form id="healthGoalsForm0">
+                    <h2>Level 1</h2>
+                    <label for="goalName">Goal Name:</label>
+                    <input type="text" id="goalName6" name="goalName" required>
+                
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration6" name="duration" required>
+                
+                    <label for="frequency">Frequency:</label>
+                    <input type="number" id="frequency6" name="frequency" required>
+                
+                    <label for="stepByStepPlan">Step by Step Plan:</label>
+                    <textarea id="stepByStepPlan6" name="stepByStepPlan" rows="4" required></textarea>
+                
+                    <label for="tipsForProgress">Tips for Progress:</label>
+                    <textarea id="tipsForProgress6" name="tipsForProgress" rows="4" required></textarea>
+                
+                    <label for="goalExplanation">Goal Explanation:</label>
+                    <textarea id="goalExplanation6" name="goalExplanation" rows="4" required></textarea>
+                
+                  </form>
+                </div>
+            </div>
+            <div class="col-4">
+              <div class="container1">
+                  <!-- <img id="loading4" src="loading.gif" alt="Italian Trulli"> -->
+                  <form id="healthGoalsForm4">
+                    <h2>Level 2</h2>
+                
+                    <label for="goalName">Goal Name:</label>
+                    <input type="text" id="goalName7" name="goalName" required>
+                
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration7" name="duration" required>
+                
+                    <label for="frequency">Frequency:</label>
+                    <input type="number" id="frequency7" name="frequency" required>
+                
+                    <label for="stepByStepPlan">Step by Step Plan:</label>
+                    <textarea id="stepByStepPlan7" name="stepByStepPlan" rows="4" required></textarea>
+                
+                    <label for="tipsForProgress">Tips for Progress:</label>
+                    <textarea id="tipsForProgress7" name="tipsForProgress" rows="4" required></textarea>
+                
+                    <label for="goalExplanation">Goal Explanation:</label>
+                    <textarea id="goalExplanation7" name="goalExplanation" rows="4" required></textarea>
+                
+                  </form>
+                  </div>
+            </div>
+            <div class="col-4">
+              <div class="container1">
+                  <!-- <img id="loading5" src="loading.gif" alt="Italian Trulli"> -->
+                <form id="healthGoalsForm5">
+                  <h2>Level 3</h2>
+              
+                  <label for="goalName">Goal Name:</label>
+                  <input type="text" id="goalName8" name="goalName" required>
+              
+                  <label for="duration">Duration:</label>
+                  <input type="text" id="duration8" name="duration" required>
+              
+                  <label for="frequency">Frequency:</label>
+                  <input type="number" id="frequency8" name="frequency" required>
+              
+                  <label for="stepByStepPlan">Step by Step Plan:</label>
+                  <textarea id="stepByStepPlan8" name="stepByStepPlan" rows="4" required></textarea>
+              
+                  <label for="tipsForProgress">Tips for Progress:</label>
+                  <textarea id="tipsForProgress8" name="tipsForProgress" rows="4" required></textarea>
+              
+                  <label for="goalExplanation">Goal Explanation:</label>
+                  <textarea id="goalExplanation8" name="goalExplanation" rows="4" required></textarea>
+              
+                </form>
+                </div>
+            </div>
+          </div>
+          <div class="row align-items-start">
 
-    <label for="duration">Duration:</label>
-    <input type="text" id="duration0" name="duration" required>
+            <form action="#" method="Post" id="SendToGameBus">
+                <h1>Submit to Gamebus</h1>
+                <label for="username">username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">password</label>
+                <input type="text" id="password" name="password" required>
+                <button type="submit">Submit</button>
+              </form>
+          </div>
+      </div>
 
-    <label for="frequency">Frequency:</label>
-    <input type="number" id="frequency0" name="frequency" required>
 
-    <label for="timePeriod">timePeriod:</label>
-    <input type="text" id="timePeriod0" name="timePeriod" required>
 
-    <label for="frequencyScale">Frequency Scale:</label>
-    <input type="text" id="frequencyScale0" name="frequencyScale" required>
-
-    <label for="stepByStepPlan">Step by Step Plan:</label>
-    <textarea id="stepByStepPlan0" name="stepByStepPlan" rows="4" required></textarea>
-
-    <label for="tipsForProgress">Tips for Progress:</label>
-    <textarea id="tipsForProgress0" name="tipsForProgress" rows="4" required></textarea>
-
-    <label for="goalExplanation">Goal Explanation:</label>
-    <textarea id="goalExplanation0" name="goalExplanation" rows="4" required></textarea>
-
-    <button type="submit">Regenerate</button>
-  </form>
-</div>
-<div class="container">
-  <img id="loading1" src="loading.gif" alt="Italian Trulli">
-  <form id="healthGoalsForm1">
-    <h2>GOAL 2</h2>
-
-    <label for="goalName">Goal Name:</label>
-    <input type="text" id="goalName1" name="goalName" required>
-
-    <label for="duration">Duration:</label>
-    <input type="text" id="duration1" name="duration" required>
-
-    <label for="frequency">Frequency:</label>
-    <input type="number" id="frequency1" name="frequency" required>
-
-    <label for="timePeriod">timePeriod:</label>
-    <input type="text" id="timePeriod1" name="timePeriod" required>
-
-    <label for="frequencyScale">Frequency Scale:</label>
-    <input type="text" id="frequencyScale1" name="frequencyScale" required>
-
-    <label for="stepByStepPlan">Step by Step Plan:</label>
-    <textarea id="stepByStepPlan1" name="stepByStepPlan" rows="4" required></textarea>
-
-    <label for="tipsForProgress">Tips for Progress:</label>
-    <textarea id="tipsForProgress1" name="tipsForProgress" rows="4" required></textarea>
-
-    <label for="goalExplanation">Goal Explanation:</label>
-    <textarea id="goalExplanation1" name="goalExplanation" rows="4" required></textarea>
-
-    <button type="submit">Regenerate</button>
-  </form>
-  </div>
-
-  <div class="container">
-    <img id="loading2" src="loading.gif" alt="Italian Trulli">
-  <form id="healthGoalsForm2">
-    <h2>GOAL 3</h2>
-
-    <label for="goalName">Goal Name:</label>
-    <input type="text" id="goalName2" name="goalName" required>
-
-    <label for="duration">Duration:</label>
-    <input type="text" id="duration2" name="duration" required>
-
-    <label for="frequency">Frequency:</label>
-    <input type="number" id="frequency2" name="frequency" required>
-
-    <label for="timePeriod">timePeriod:</label>
-    <input type="text" id="timePeriod2" name="timePeriod" required>
-
-    <label for="frequencyScale">Frequency Scale:</label>
-    <input type="text" id="frequencyScale2" name="frequencyScale" required>
-
-    <label for="stepByStepPlan">Step by Step Plan:</label>
-    <textarea id="stepByStepPlan2" name="stepByStepPlan" rows="4" required></textarea>
-
-    <label for="tipsForProgress">Tips for Progress:</label>
-    <textarea id="tipsForProgress2" name="tipsForProgress" rows="4" required></textarea>
-
-    <label for="goalExplanation">Goal Explanation:</label>
-    <textarea id="goalExplanation2" name="goalExplanation" rows="4" required></textarea>
-
-    <button type="submit">Regenerate</button>
-  </form>
-  </div>
-  </div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
-    const goalsData = `{
-  "Goals": [
-      {
-          "Goal": "Patient will engage in 30 minutes of collaborative exercise with a workout buddy at least 3 times per week for the next 3 months",
-          "Duration": "30 minutes",
-          "Frequency": 3,
-          "Frequency Scale": "weekly",
-          "Time Period": "3 months",
-          "Step-by-step Plan": [
-              "Find a workout buddy or join a fitness class that emphasizes collaboration",
-              "Schedule exercise sessions with the workout buddy at least 3 times per week",
-              "Engage in a variety of exercises that require collaboration, such as partner workouts or group activities"
-          ],
-          "Tips for Progress": [
-              "Choose a workout buddy who shares similar fitness goals and interests",
-              "Set specific exercise session times and stick to the schedule",
-              "Celebrate achievements and motivate each other during workouts"
-          ],
-          "Goal Explanation": "Collaborative exercise not only enhances motivation and accountability but also fosters a sense of relatedness and social connection, leading to overall well-being."
-      },
-      {
-          "Goal": "Patient will participate in a feedback-based fitness program for 1 hour per day, 5 days a week, for the next 6 months",
-          "Duration": "1 hour",
-          "Frequency": 5,
-          "Frequency Scale": "daily",
-          "Time Period": "6 months",
-          "Step-by-step Plan": [
-              "Find a reputable fitness program or hire a personal trainer who provides regular feedback",
-              "Allocate 1 hour per day for the fitness program",
-              "Follow the program instructions and actively seek feedback from the trainer or program instructor"
-          ],
-          "Tips for Progress": [
-              "Track progress and record feedback received",
-              "Communicate openly with the trainer or instructor to ensure clear understanding",
-              "Adjust the program based on the feedback received for continuous improvement"
-          ],
-          "Goal Explanation": "Participating in a feedback-based fitness program allows for continuous improvement, helps identify areas of strength and areas needing improvement, and contributes to overall well-being."
-      },
-      {
-          "Goal": "Patient will engage in 20 minutes of relatedness-focused physical activities with family members daily for the next 3 months",
-          "Duration": "20 minutes",
-          "Frequency": 1,
-          "Frequency Scale": "daily",
-          "Time Period": "3 months",
-          "Step-by-step Plan": [
-              "Identify physical activities that can be enjoyed together as a family, such as bike rides, hikes, or playing sports",
-              "Allocate 20 minutes each day for family-related physical activities",
-              "Encourage active participation and engagement from all family members"
-          ],
-          "Tips for Progress": [
-              "Rotate activity choices to cater to different family member preferences",
-              "Make it a fun and enjoyable experience by incorporating games or challenges",
-              "Ensure a supportive and inclusive environment for all family members"
-          ],
-          "Goal Explanation": "Engaging in relatedness-focused physical activities with family members not only promotes fitness but also strengthens family bonds, fosters a sense of belonging, and contributes to overall well-being."
-      }
-  ]
-}`;
 
     // JavaScript to handle form submission
     document.getElementById('questionForm').addEventListener('submit', function (event) {
@@ -224,115 +334,62 @@
 
       // Get the question from the input field
         const question = document.getElementById('question').value;
+        const physicalQuestion = document.getElementById('physicalQuestion').value;
+        const cognitiveQuestion = document.getElementById('cognitiveQuestion').value;
+
         console.log(question);
-      getData(question);    
-    });
+      getData(question, 0, "social");    
+      getData(physicalQuestion, 3, "physical");
+      getData(cognitiveQuestion, 6, "cognitive");
 
-    document.getElementById('healthGoalsForm0').addEventListener('submit', function (event) {
-      event.preventDefault();
-      modifyGoal(0);
-    });
-    document.getElementById('healthGoalsForm1').addEventListener('submit', function (event) {
-      event.preventDefault();
-      modifyGoal(1);
-    });
-    document.getElementById('healthGoalsForm2').addEventListener('submit', function (event) {
-      event.preventDefault();
-      modifyGoal(2);
-    });
+      console.log("DONEE");
 
+    });
+    
+    async function removeLoading(dimension){
 
-    async function getData(outcomeGoal){
+        if(dimension ==="social"){
+            document.getElementById("loading0").style.visibility = "hidden";
+        }
+        if(dimension ==="physical"){
+            document.getElementById("loading3").style.visibility = "hidden";
+        }
+        if(dimension ==="cognitive"){
+            document.getElementById("loading6").style.visibility = "hidden";
+        }
+    }
+
+    async function getData(outcomeGoal, offset, dimension){
       var requestOptions = {
         method: 'GET',
         redirect: 'follow'
       };
       document.getElementById("loading0").style.visibility = "visible";
-      document.getElementById("loading1").style.visibility = "visible";
-      document.getElementById("loading2").style.visibility = "visible";
+      document.getElementById("loading3").style.visibility = "visible";
+      document.getElementById("loading6").style.visibility = "visible";
 
-      // displayData(goalsData);
-      const response = await fetch("https://ggzc1-api.gamebus.eu/goal?outcomeGoal=" + outcomeGoal, requestOptions)
+      const response = await fetch("http://localhost:3000/dimensiongoals?outcomeGoal=" + outcomeGoal+ "&dimension="+dimension, requestOptions)
         .then(response => response.text())
-        .then(result => displayData(result))
+        .then(result => displayData(result, offset))
+        .then(r => removeLoading(dimension))
         .catch(error => console.log('error', error));
       }
 
-    async function displayData(generatedAnswers){
+    async function displayData(generatedAnswers, offset){
       generatedAnswers = JSON.parse(generatedAnswers);
-      for(var i = 0; i < generatedAnswers["Goals"].length; i++){
-        console.log(generatedAnswers["Goals"][i]["Goal"]);
-        document.getElementById("goalName"+i).value = generatedAnswers["Goals"][i]["Goal"];
-        document.getElementById("duration"+i).value = generatedAnswers["Goals"][i]["Duration"];
-        document.getElementById("frequency"+i).value = generatedAnswers["Goals"][i]["Frequency"];
-        document.getElementById("frequencyScale"+i).value = generatedAnswers["Goals"][i]["Frequency Scale"];
-        document.getElementById("timePeriod"+i).value = generatedAnswers["Goals"][i]["Time Period"];
-        document.getElementById("stepByStepPlan"+i).value = generatedAnswers["Goals"][i]["Step-by-step Plan"];
-        document.getElementById("tipsForProgress"+i).value = generatedAnswers["Goals"][i]["Tips for Progress"];
-        document.getElementById("goalExplanation"+i).value = generatedAnswers["Goals"][i]["Goal Explanation"];
-      }
-      document.getElementById("loading0").style.visibility = "hidden";
-      document.getElementById("loading1").style.visibility = "hidden";
-      document.getElementById("loading2").style.visibility = "hidden";
-    }
-
-
-    async function modifyGoal(goal)
-    {
-      document.getElementById("loading"+goal).style.visibility = "visible";
-
-      const outcomeGoal =       document.getElementById("question").value;
-      const name =              document.getElementById("goalName"+goal).value;
-      const duration =          document.getElementById("duration"+goal).value;
-      const frequency =         document.getElementById("frequency"+goal).value;
-      const frequencyScale =    document.getElementById("frequencyScale"+goal).value;
-      const timePeriod =        document.getElementById("timePeriod"+goal).value;
-      const stepByStepPlan = [  document.getElementById("stepByStepPlan"+goal).value];
-      const tipsForProgress = [ document.getElementById("tipsForProgress"+goal).value];
-      const goalExplanation =   document.getElementById("goalExplanation"+goal).value;
-
-      const behaviorGoalJson = {
-        "Goal": name,
-        "Duration": duration,
-        "Frequency": frequency,
-        "Frequency Scale": frequencyScale,
-        "Time Period":timePeriod ,
-        "Step-by-step Plan": stepByStepPlan,
-        "Tips for Progress": tipsForProgress,
-        "Goal Explanation": goalExplanation,
-
+      for(var j = 0; j < generatedAnswers["Goals"].length; j++){
+        let i = j + offset;
+        console.log(generatedAnswers["Goals"][j]["Goal"]);
+        document.getElementById("goalName"+i).value = generatedAnswers["Goals"][j]["Goal"];
+        document.getElementById("duration"+i).value = generatedAnswers["Goals"][j]["Duration"];
+        document.getElementById("frequency"+i).value = generatedAnswers["Goals"][j]["Frequency"];
+        document.getElementById("stepByStepPlan"+i).value = generatedAnswers["Goals"][j]["Step-by-step Plan"];
+        document.getElementById("tipsForProgress"+i).value = generatedAnswers["Goals"][j]["Tips for Progress"];
+        document.getElementById("goalExplanation"+i).value = generatedAnswers["Goals"][j]["Goal Explanation"];
       }
 
-      const behaviorGoal = JSON.stringify(behaviorGoalJson);
-
-      console.log(outcomeGoal);
-      console.log(behaviorGoal);
-      var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      };
-
-      const response = await fetch("https://ggzc1-api.gamebus.eu/modifyGoal?outcomeGoal=" + outcomeGoal + "&behaviorGoal=" + behaviorGoal, requestOptions)
-        .then(response => response.text())
-        .then(result => UpdateGoal(result, goal))
-        .catch(error => console.log('error', error));
     }
 
-    async function UpdateGoal(generatedAnswer, goal){
-      generatedAnswer = JSON.parse(generatedAnswer);
-      console.log(generatedAnswer);
-
-      document.getElementById("goalName"+goal).value= generatedAnswer["Goal"];    
-      document.getElementById("duration"+goal).value = generatedAnswer["Duration"];
-      document.getElementById("frequency"+goal).value= generatedAnswer["Frequency"];
-      document.getElementById("frequencyScale"+goal).value= generatedAnswer["Frequency Scale"];
-      document.getElementById("timePeriod"+goal).value= generatedAnswer["Time Period"];
-      document.getElementById("stepByStepPlan"+goal).value = generatedAnswer["Step-by-step Plan"];
-      document.getElementById("tipsForProgress"+goal).value = generatedAnswer["Tips for Progress"];
-      document.getElementById("goalExplanation"+goal).value = generatedAnswer["Goal Explanation"];
-      
-      document.getElementById("loading"+goal).style.visibility = "hidden";
-    }
 
   </script>
 
